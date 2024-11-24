@@ -132,3 +132,17 @@ button:hover {
 .options a:hover {
     text-decoration: underline;
 }
+.form-container {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid #91BE55;
+    text-align: center;
+}
+
+.form-content {
+    display: block; /* Ensure forms are displayed correctly when toggled */
+}

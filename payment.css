@@ -1,0 +1,140 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the card and payment form */
+.payment-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Styling the ATM Card */
+.atm-card {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0066cc, #333);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.atm-card:hover {
+    transform: scale(1.05);
+}
+
+.card-front, .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-logo img {
+    width: 50px;
+}
+
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.card-name {
+    font-weight: bold;
+}
+
+.card-expiry {
+    font-size: 0.9rem;
+}
+
+.card-back {
+    background-color: #333;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.cvv {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Styling for the Payment Form */
+.payment-form {
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-top: 5px;
+}
+
+.input-group input:focus {
+    border-color: #0066cc;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-btn:hover {
+    background-color: #0055a1;
+}
+
