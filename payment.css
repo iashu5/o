@@ -1,140 +1,149 @@
-/* Reset default styles */
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body and background styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
-/* Container for the card and payment form */
-.payment-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* max-width: 800px; */
+  margin-top: auto;
+  width: 100%;
 }
 
-/* Styling the ATM Card */
-.atm-card {
-    width: 300px;
-    height: 180px;
-    border-radius: 15px;
-    background: linear-gradient(to right, #0066cc, #333);
-    position: relative;
-    overflow: hidden;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  
 }
 
-.atm-card:hover {
-    transform: scale(1.05);
+.subheading {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
 }
 
-.card-front, .card-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
+/* Form Layout - Horizontal */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-bottom: 20px; */
 }
 
-.card-logo img {
-    width: 50px;
+.form-group {
+  flex: 1 1 30%;
+  min-width: 150px;
+  margin-bottom: 15px;
 }
 
-.card-number {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  /* margin-bottom: 6px; */
+  color: #34495e;
+  display: block;
 }
 
-.card-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccd1d9;
+  transition: all 0.3s ease;
 }
 
-.card-name {
-    font-weight: bold;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
 }
 
-.card-expiry {
-    font-size: 0.9rem;
+textarea {
+  height: 80px;
+  resize: none;
 }
 
-.card-back {
-    background-color: #333;
-    text-align: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+/* Button */
+.submit-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.cvv {
-    font-size: 1.2rem;
-    margin-top: 10px;
+.submit-button:hover {
+  background-color: #218838;
 }
 
-/* Styling for the Payment Form */
-.payment-form {
-    width: 400px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.submit-button:active {
+  background-color: #1e7e34;
 }
 
-h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: #333;
+/* Success Message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.input-group {
-    margin-bottom: 20px;
+.success-message h2 {
+  margin-bottom: 10px;
 }
 
-.input-group label {
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+.hidden {
+  display: none;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    outline: none;
-    margin-top: 5px;
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
-.input-group input:focus {
-    border-color: #0066cc;
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
 }
 
-.pay-btn {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2rem;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.checkbox-group a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.pay-btn:hover {
-    background-color: #0055a1;
+.checkbox-group a:hover {
+  text-decoration: underline;
 }
-

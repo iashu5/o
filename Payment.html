@@ -1,74 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATM Card Payment</title>
-    <link rel="stylesheet" href="payment.css" />
-  </head>
-  <body>
-    <div class="payment-container">
-      <div class="atm-card">
-        <div class="card-front">
-          <div class="card-logo">
-            <img
-              src="https://img.icons8.com/ios/452/visa.png"
-              alt="Visa logo"
-            />
-          </div>
-          <div class="card-number">
-            <span>**** **** **** 1234</span>
-          </div>
-          <div class="card-info">
-            <div class="card-name">John Doe</div>
-            <div class="card-expiry">12/25</div>
-          </div>
-        </div>
-        <div class="card-back">
-          <div class="cvv">CVV: 123</div>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now - Support a Cause</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
 
-      <div class="payment-form">
-        <h2>ATM Card Payment</h2>
-        <form action="#" method="post">
-          <div class="input-group">
-            <label for="card-number">Card Number</label>
-            <input
-              type="text"
-              id="card-number"
-              name="card-number"
-              placeholder="1234 5678 9101 1121"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label for="cardholder-name">Cardholder Name</label>
-            <input
-              type="text"
-              id="cardholder-name"
-              name="cardholder-name"
-              placeholder="John Doe"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label for="expiry-date">Expiry Date</label>
-            <input type="month" id="expiry-date" name="expiry-date" required />
-          </div>
-          <div class="input-group">
-            <label for="cvv">CVV</label>
-            <input
-              type="password"
-              id="cvv"
-              name="cvv"
-              placeholder="***"
-              required
-            />
-          </div>
-          <button type="submit" class="pay-btn">Pay Now</button>
+    <div class="container">
+        <h1>Make a Donation</h1>
+        <p class="subheading">Your support can make a world of difference!</p>
+        
+        <form id="donationForm" class="donation-form">
+            <div class="form-section">
+                <!-- Donation Amount -->
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount" required min="1">
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <!-- Billing Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Billing Address" required>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                </div>
+
+                <!-- Zip -->
+                <div class="form-group">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zip" placeholder="Zip" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <!-- Credit Card -->
+                <div class="form-group">
+                    <label for="card">Card Number</label>
+                    <input type="text" id="card" name="card" placeholder="Card Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="expDate">Exp Date</label>
+                    <input type="month" id="expDate" name="expDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <!-- Donation Type -->
+                <div class="form-group">
+                    <label for="donationType">Type</label>
+                    <select id="donationType" name="donationType">
+                        <option value="oneTime">One-time</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+
+                <!-- Anonymity -->
+                <div class="form-group">
+                    <label for="anonymous">Anonymous</label>
+                    <input type="checkbox" id="anonymous" name="anonymous">
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message (optional)"></textarea>
+            </div>
+
+            <!-- Consent -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">terms</a>.</label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-button">Donate Now</button>
         </form>
-      </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="hidden success-message">
+            <h2>Thank You!</h2>
+            <p>Your donation has been processed.</p>
+        </div>
     </div>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

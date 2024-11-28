@@ -44,7 +44,6 @@ body {
     animation-delay: 10s;
 }
 
-
 @keyframes slideAnimation {
     0% { opacity: 1; }
     33.33% { opacity: 0; }
@@ -52,7 +51,7 @@ body {
     100% { opacity: 1; }
 }
 
-.login-container {
+.form-container {
     flex: 1;
     background: white;
     padding: 40px;
@@ -131,16 +130,6 @@ button:hover {
 
 .options a:hover {
     text-decoration: underline;
-}
-.form-container {
-    flex: 1;
-    background: white;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 1px solid #91BE55;
-    text-align: center;
 }
 
 .form-content {
